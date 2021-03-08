@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('./db/mongoose');
 
+
+
 const app = express();
-let port = process.env.PORT || 5000 ;
+let port = process.env.PORT || 5000;
 app.listen(port,()=>{
     console.log(`server started at http://localhost:${port}`);
 })
@@ -22,7 +24,7 @@ app.use((req, res, next) =>{
     next()
     })
 
-   // app.use('/',(req,res)=>res.send("hello from express.This is Sumit Kulkarni"));
+    //app.use('/',(req,res)=>res.send("hello from express.This is Sumit Kulkarni"));
 
     //posts method for creating a new student class
 app.post('/myclass', (req, res) => {
@@ -88,6 +90,8 @@ app.patch('/myclass/:myclassId/students/:studentId', (req, res) => {
     })
 
     //deleting
+    //deleteStudents = (classId) => {student.deleteMany({_id:classId})}
+
     app.delete('/myclass/:myclassId', (req, res) =>{
         const deleteStudents = (myclass) =>{
         student.deleteMany({ '_id': req.params.myclassId})
