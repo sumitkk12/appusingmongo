@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('./db/mongoose');
-
+var cors = require('cors');
 
 
 const app = express();
