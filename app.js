@@ -16,6 +16,8 @@ const student = require('./db/dbmodel/student')
 //enable our app to parse json data format
 app.use(express.json())
 
+app.use(cors());
+
 app.use((req, res, next) =>{
     res.header("Access-Control-Allow-origin", "*")
     res.header("Access-Control-Allow-Methods", "GET, POST, HEAD,OPTIONS, PUT, PATCH, DELETE")
