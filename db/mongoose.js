@@ -3,7 +3,7 @@ require('dotenv').config()
 username = process.env.DB_USERNAME;
 password = process.env.DB_PASSWORD;
 
-const url =`mongodb+srv://${username}:${password}@cluster0.celtl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+const url =`mongodb+srv://${username}:${password}@cluster0.celtl.mongodb.net/mySecondDatabase?retryWrites=true&w=majority`
 //hello wor
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
