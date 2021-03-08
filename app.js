@@ -3,6 +3,10 @@ const mongoose = require('./db/mongoose');
 
 const app = express();
 let port = process.env.port  || 5000;
+app.listen(port,()=>{
+    console.log(`server started at http://localhost:${port}`);
+})
+
 
 
 const myclass = require('./db/dbmodel/myclass')
@@ -106,6 +110,3 @@ app.delete('/myclass/:myclassId/students/:studentId', (req, res) => {
 
 
 
-app.listen(port,()=>{
-    console.log(`server started at http://localhost:${port}`);
-})
