@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('./db/mongoose');
 
 const app = express();
-let port = process.env.port  || 3000;
+let port = process.env.port  || 5000;
 
 
 const myclass = require('./db/dbmodel/myclass')
