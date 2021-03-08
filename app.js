@@ -18,6 +18,8 @@ app.use((req, res, next) =>{
     next()
     })
 
+    app.use('/',(req,res)=>res.send("hello from express"));
+
     //posts method for creating a new student class
 app.post('/myclass', (req, res) => {
     (new myclass({'className': req.body.className, 'numberOfStudents' : req.body.numberOfStudents}))
