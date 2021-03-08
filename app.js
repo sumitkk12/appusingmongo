@@ -51,7 +51,7 @@ app.get('/myclass/:myclassId', (req, res) =>{
     })    
 
 
-//get all students from this classId
+//get all students from this classId ok then
 app.get('/myclass/:myclassId/students', (req, res) =>{
     student.find({ _classId: req.params.myclassId })
     .then((student) => res.send(student))
