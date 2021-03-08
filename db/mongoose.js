@@ -12,4 +12,4 @@ mongoose.connect(url, {useNewUrlParser : true, useFindAndModify: false,useUnifie
     .then(() => console.log(`Database Connected`))
     .catch((error) => console.log(error));
 
-module.exports = mongoose
+module.exports = mongoose;
