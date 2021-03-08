@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('./db/mongoose');
 
 const app = express();
-let port = process.env.port  || 5000;
+let port = process.env.PORT || 5000 ;
 app.listen(port,()=>{
     console.log(`server started at http://localhost:${port}`);
 })
