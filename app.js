@@ -46,18 +46,16 @@ app.get('/myclass/:myclassId', async(req, res) =>{
 
 
 //get all students from this classId ok then
-app.get('/myclass/:myclassId/students', (req, res) =>{
-    student.find({ _classId: req.params.myclassId })
-    .then((student) => res.send(student))
-    .catch((error) => console.log(error))
+app.get('/myclass/:myclassId/students', async(req, res) =>{
+    const result = await student.find({ _classId: req.params.myclassId })
+   res.json(result);
     })
     
     
     //get one student
-app.get('/myclass/:myclassId/students/:studentId', (req, res) =>{
-    student.findOne({ _classId: req.params.myclassId, _id: req.params.studentId })
-    .then((onestudent) => res.send(onestudent))
-    .catch((error) => console.log(error))
+app.get('/myclass/:myclassId/students/:studentId', async(req, res) =>{
+    const result = await student.findOne({ _classId: req.params.myclassId, _id: req.params.studentId })
+    res.json(result);
     })
 
 
